@@ -1,0 +1,192 @@
+body {
+    background-color: #ffffff;
+    padding-top: 50px; /* Adjust this value to create space at the top */
+}
+
+/* Wrapper to contain both the image and the form */
+.contact-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #ffffff;
+    margin-top: 50px; /* Push the entire wrapper down */
+}
+
+/* Left side image styling */
+.contact-image {
+    flex: 1;
+    text-align: right;
+    padding-right: 20px;
+}
+
+.contact-image img {
+    max-width: 500px;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Right side form styling */
+.contact-container {
+    flex: 1;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    margin-left: 200px; /* Move the form to the right */
+    margin-top: 20px; /* Optional: Add top margin to the form itself */
+}
+
+/* Styling for the h2 'Contact Us' */
+#topic {
+    color: #805ecf; /* Text color */
+    font-size: 2rem; /* Adjust size as needed */
+    text-align: left;
+    margin-left: 220px;
+}
+
+/* Styling for the p 'Fill out the form...' */
+#detail {
+    color: #744ecd; /* Lighter button color */
+    font-size: 1rem; /* Adjust size as needed */
+    text-align: left;
+    margin-bottom: 0px;
+    margin-left: 220px;
+    font-weight: 400;
+}
+
+.contact-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #744ECD;
+}
+
+/* Styling the form fields */
+.contact-container label {
+    display: block;
+    margin-bottom: 5px;
+    color: #6f4ac7;
+    font-weight: 500;
+}
+
+.contact-container input,
+.contact-container textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 30px; /* Rounded corners */
+    background-color: rgba(138, 123, 226, 0.1); /* Reduced opacity for a pale purple background */
+    outline: none; /* Remove focus border */
+    box-shadow: none; /* Remove shadow on input */
+    color: #9370e4; /* Change font color to black */
+    font-family: Arial, sans-serif; /* Apply consistent font style */
+    font-size: 1rem; /* Same font size across inputs and textarea */
+}
+
+.contact-container input::placeholder,
+.contact-container textarea::placeholder {
+    color: rgba(138, 123, 226, 0.5); /* Pale purple placeholder */
+    opacity: 0.6; /* Make the placeholder less prominent */
+    font-weight: 400;
+}
+
+/* Styling for email and phone fields in one row */
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px; /* Adds space between the fields */
+}
+
+.form-group {
+    flex: 1;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 15px;
+    border-radius: 30px; /* Make individual inputs rounded */
+    background-color: rgba(84, 62, 207, 0.1); /* Pale purple background */
+    border: none;
+    outline: none;
+    box-shadow: none;
+    color: #9370e4; /* Ensure black font color here as well */
+    font-family: Arial, sans-serif; /* Same font style */
+    font-size: 1rem; /* Same font size */
+}
+
+/* Button styling */
+.contact-container button {
+    padding: 12px 20px; /* Increase padding for a larger button */
+    font-size: medium; /* Increase font size for better visibility */
+    margin-right: 10px;
+    background-color: #9370e4; /* Button color */
+    color: white;
+    border: none;
+    border-radius: 30px; /* Keep rounded corners */
+    margin-top: 15px;
+    cursor: pointer;
+    width: 100px; /* Slightly increase button width */
+    height: 40px; /* Slightly increase button height */
+    text-align: center; /* Center the text horizontally */
+    display: flex; /* Use flexbox to center the text */
+    justify-content: center; /* Center text horizontally */
+    align-items: center; /* Center text vertically */
+    transition: background-color 0.3s ease;
+}
+
+.contact-container button:hover {
+    background-color: #744ECD;
+}
+
+/* For the message section */
+textarea {
+    resize: none;
+    color: black; /* Ensure the font color is black */
+    font-family: Arial, sans-serif; /* Same font style */
+    font-size: 1rem; /* Ensure font size is consistent */
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center; /* Center aligns the icons and text */
+    gap: 30px; /* Adds space between the two items */
+    margin-top: 20px;
+  }
+  
+  .info-item {
+    display: flex;
+    align-items: center; /* Aligns the icon circle and text in the center vertically */
+  }
+  
+  .icon-circle {
+    width: 30px; /* Width of the circle */
+    height: 30px; /* Height of the circle */
+    background-color: #744ECD; /* Purple background similar to your design */
+    border-radius: 50%; /* Makes the div a perfect circle */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centers the icon inside the circle */
+    margin-right: 10px; /* Space between the icon and the text */
+  }
+  
+  .icon-circle i {
+    color: white; /* White icon color */
+    font-size: 14px; /* Smaller icon size */
+  }
+  
+  .icon-circle .phone-icon {
+    transform: rotate(90deg); /* Rotates the phone icon 20 degrees */
+  }
+  
+  .info-link {
+    text-decoration: none; /* Remove underline */
+    color: #744ECD; /* Purple text color */
+    font-size: 16px; /* Text size */
+    transition: color 0.3s ease;
+  }
+  
+  .info-link:hover {
+    color: #744ECD; /* Optional: Change color on hover */
+  }
+  

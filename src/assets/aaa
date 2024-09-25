@@ -1,0 +1,289 @@
+/* Overall container styling */
+.admin-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 20px 0 0 0;
+    padding-top: 40px;
+    width: 100vw;
+    height: 100vh; /* Full viewport height */
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+    overflow: hidden; /* Prevent overflow of content */
+}
+
+/* Inquiry list styling */
+.inquiry-list {
+    width: 35%;
+    background-color: #93a0f11c;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 60px); /* Full height minus some padding */
+    overflow-y: auto; /* Enable vertical scroll if content exceeds */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 20px; /* Rounded corners for the container */
+}
+
+/* Inquiry item styling */
+.inquiry-item {
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    height: 55px;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+    border-width: 1px;
+    border-color: #c4aef7;
+    text-indent: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+/* Hover effect for inquiry item */
+.inquiry-item:hover {
+    background-color: #adb7f5;
+    color: #ffffff;
+}
+
+.inquiry-item h3 {
+    margin: 0;
+    font-size: 16px;
+    color: #744ecd;
+}
+
+.inquiry-item p {
+    margin: 5px 0;
+    color: #744ecd;
+    font-size: 14px;
+}
+
+.inquiry-date {
+    color: #b39aec;
+    font-size: 12px;
+    position: absolute; /* Position relative to the inquiry item */
+    bottom: 5px; /* Push to the bottom */
+    right: 10px; /* Push to the right */
+}
+
+/* Main content area for inquiry details */
+.content-area {
+    width: 65%;
+    padding: 30px;
+    background-color: #93a0f11c;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 60px); /* Full height minus some padding */
+    overflow-y: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    scrollbar-width: thin;
+    scrollbar-color: #939ff1 #ffffff;
+    border-radius: 20px; /* Rounded corners for the container */
+}
+
+.content-area h3 {
+    margin-bottom: 20px;
+    color: #495057;
+    font-size: 18px;
+}
+
+.content-area h4,
+.content-area p {
+    color: #744ecd;
+}
+
+.reply-area {
+    margin-top: 10px;
+}
+
+/* Reply textarea styling */
+textarea {
+    width: 90%;
+    height: 150px;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 30px;
+    border: none;
+    resize: none;
+    background-color: white;
+    color: #744ecd;
+    font-size: 16px;
+}
+
+textarea::placeholder {
+    color: rgb(177, 154, 230);
+}
+
+/* Reply message styling */
+.reply-message {
+    width: 90%;
+    font-size: 14px;
+    color: #495057;
+    background-color: #f0f0f5;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+
+.replies h5 {
+    font-size: 16px;
+    color: #744ecd;
+    margin-bottom: 10px;
+}
+
+/* Scrollbar Customization */
+.content-area::-webkit-scrollbar {
+    width: 8px;
+}
+
+.content-area::-webkit-scrollbar-track {
+    background: #e6e6f0;
+    border-radius: 10px;
+}
+
+.content-area::-webkit-scrollbar-thumb {
+    background-color: #744ecd;
+    border-radius: 10px;
+    border: 2px solid transparent;
+}
+
+.content-area::-webkit-scrollbar-button {
+    display: none;
+}
+
+/* Button styles */
+button.reply-btn,
+button.discard-btn {
+    padding: 12px;
+    font-size: 14px;
+    text-align: center;
+    margin-right: 10px;
+    border-radius: 30px;
+    cursor: pointer;
+    width: 100px;
+    height: 40px;
+    transition: background-color 0.3s ease;
+}
+
+button.reply-btn {
+    background-color: #9370e4;
+    color: white;
+    border: none;
+}
+
+button.reply-btn:hover {
+    background-color: #744ecd;
+}
+
+button.discard-btn {
+    background-color: white;
+    color: #b094f0;
+    border: 1px solid #b094f0;
+}
+
+button.discard-btn:hover {
+    color: #ffffff;
+    background-color: #939ff1;
+}
+
+/* Search bar */
+input.search-bar {
+    width: 95%;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    margin-bottom: 20px;
+    background-color: #adb7f5;
+}
+
+.search-bar:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+input.search-bar::placeholder {
+    color: #ffffff;
+    opacity: 1;
+}
+
+/* Profile image styles */
+.profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 360px;
+    object-fit: cover;
+}
+
+.selected-profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 360px;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.inquiry-profile {
+    display: flex;
+    align-items: center;
+}
+
+.inquiry-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.inquiry-header {
+    display: flex;
+    align-items: center;
+}
+
+.inquiry-header-info {
+    color: #744ecd;
+}
+
+.inquiry-header-info h3,
+.inquiry-header-info p {
+    color: #744ecd;
+    margin: 0;
+}
+
+.content-area p {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+/* Reply icons */
+.reply-icons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.reply-icons .edit-icon,
+.reply-icons .delete-icon {
+    background-color: #939ff1;
+    color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-left: 10px;
+    padding: 5px;
+    font-size: 10px;
+}
+
+.reply-icons .edit-icon:hover,
+.reply-icons .delete-icon:hover {
+    background-color: #ffffff;
+    color: #939ff1;
+}

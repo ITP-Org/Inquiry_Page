@@ -1,0 +1,417 @@
+/* Overall container styling */
+.admin-container {
+    margin-top: 10px;
+    display: flex;
+    margin-left: 150px;
+    width: 1300px;
+    flex-direction: row;
+    height: 100vh;
+    margin-bottom: 50px;
+    font-family: 'Poppins', sans-serif; /* Set font for container */
+}
+
+/* Inquiry list styling */
+.inquiry-list {
+    width: 35%;
+    background-color: #93a0f11c;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 82vh; /* Full height minus some padding */
+    overflow-y: auto; /* Enable vertical scroll if content exceeds */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 20px; /* Rounded corners for the container */
+    scrollbar-width: thin; /* For Firefox - makes scrollbar thinner */
+    scrollbar-color: #939ff1 #ffffff; 
+}
+
+/* Inquiry item styling */
+.inquiry-item {
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    height: 55px;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+    border-width: 1px;
+    border-color: #c4aef7;
+    text-indent: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    font-family: 'Poppins', sans-serif; /* Set font for inquiry items */
+}
+
+/* Hover effect for inquiry item */
+/* Hover effect for inquiry item */
+.inquiry-item:hover {
+    background-color: #adb7f5;
+    color: white; /* Set overall text color to white on hover */
+}
+
+.inquiry-item:hover h3,
+.inquiry-item:hover p,
+.inquiry-item:hover .inquiry-date {
+    color: white; /* Ensures all text within the item is white on hover */
+}
+
+.inquiry-item h3 {
+    margin: 0;
+    font-size: 16px;
+    color: #744ecd;
+    font-family: 'Poppins', sans-serif; /* Set font for inquiry item heading */
+}
+
+.inquiry-item p {
+    margin: 5px 0;
+    color: #744ecd;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif; /* Set font for inquiry item paragraph */
+}
+
+.inquiry-date {
+    color: #744ecd;
+    font-size: 12px;
+    position: absolute; /* Position relative to the inquiry item */
+    bottom: 5px; /* Push to the bottom */
+    right: 10px; /* Push to the right */
+}
+
+/* Inquiry profile styling */
+.inquiry-profile {
+    display: flex;
+    align-items: center; /* Center profile items */
+}
+
+.inquiry-info {
+    display: flex;
+    flex-direction: column; /* Stack info vertically */
+    justify-content: space-between;
+    flex-grow: 1; /* Allow info to grow */
+}
+
+.inquiry-header {
+    display: flex;
+    align-items: center; /* Center items */
+}
+
+.inquiry-header-info {
+    color: #744ecd; /* Consistent color for header info */
+}
+
+.inquiry-header-info h3,
+.inquiry-header-info p {
+    color: #744ecd; /* Consistent color for text */
+    margin: 0; /* Remove default margin */
+    font-family: 'Poppins', sans-serif; /* Set font for header info */
+}
+
+/* Inquiry list scrollbar customization */
+.inquiry-list::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+}
+
+.inquiry-list::-webkit-scrollbar-track {
+    background: #e6e6f0; /* Color of the scroll track */
+    border-radius: 10px; /* Rounded corners for the track */
+}
+
+.inquiry-list::-webkit-scrollbar-thumb {
+    background-color: #744ecd; /* Scrollbar thumb color */
+    border-radius: 10px; /* Rounded scrollbar thumb */
+    border: 2px solid transparent; /* Space around the scrollbar */
+}
+
+/* Remove the scrollbar buttons (arrow heads) */
+.inquiry-list::-webkit-scrollbar-button {
+    display: none; /* Hides the scrollbar buttons */
+}
+
+
+.no-inquiries-message {
+    color: #744ecd; /* Change this to your desired color */
+    font-size: 14px; /* Optional: Adjust font size */
+    text-align: center; /* Center the message */
+    margin-top: 20px; /* Optional: Add space above the message */
+}
+
+.inquiry-item.active {
+    background-color: #adb7f5;
+    color: white;
+}
+
+/* Color text white within an active inquiry item */
+.inquiry-item.active h3,
+.inquiry-item.active p,
+.inquiry-item.active .inquiry-date {
+    color: white; /* Sets text color to white */
+}
+
+
+/* Main content area for inquiry details */
+.content-area {
+    width: 60%; /* Adjusted width */
+    padding: 30px; /* Padding around the content area */
+    margin-left: 10px; /* Space to the left */
+    background-color: #93a0f11c; /* Background color */
+    display: flex; /* Flexbox layout */
+    border-radius: 40px; /* Rounded corners */
+    flex-direction: column; /* Column layout */
+    height: 80vh; /* Height of the content area */
+    overflow-y: auto; /* Enable vertical scroll if content exceeds the area */
+    scrollbar-width: thin; /* For Firefox - makes scrollbar thinner */
+    scrollbar-color: #939ff1 #ffffff; /* Scrollbar color and track color */
+}
+
+.content-area h3 {
+    margin-bottom: 10px; /* Reduced space below header */
+    color: #744ecd; /* Header color */
+    font-size: 18px;
+    padding-left: 10px; /* Reduced left padding */
+    padding-top: 5px; /* Reduced top padding */
+    font-family: 'Poppins', sans-serif; /* Set font for content area heading */
+}
+
+.content-area h4,
+.content-area p {
+    color: #744ecd; /* Color for subject and message */
+    padding-left: 10px; /* Reduced left padding */
+    font-family: 'Poppins', sans-serif; /* Set font for content area text */
+    margin-bottom: 3px; /* Optional: Add some space below paragraphs */
+}
+
+
+.reply-area {
+    margin-top: 10px; /* Space above reply area */
+}
+
+/* Reply textarea styling */
+textarea {
+    width: 710px; /* Full width */
+    height: 150px; /* Height for textarea */
+    padding: 15px; /* Padding inside textarea */
+    margin-top: 10px; /* Space above textarea */
+    border-radius: 30px; /* Rounded corners */
+    border: none; /* No border color */
+    resize: none; /* Disable resizing */
+    background-color: white; /* Background color */
+    color: #744ecd; /* Font color */
+    font-size: 16px; /* Font size for better readability */
+    font-family: 'Poppins', sans-serif; /* Set font for textarea */
+}
+
+textarea::placeholder {
+    color: rgb(177, 154, 230); /* Pale color for placeholder */
+}
+
+/* Reply message styling */
+.reply-message {
+    font-size: 14px; /* Font size for the reply */
+    color: #744ecd; /* Font color for the reply */
+    background-color: white; /* Background color for the reply */
+    padding: 10px; /* Padding for reply */
+    border-radius: 30px; /* Rounded corners */
+    margin-bottom: 5px; /* Space below reply */
+    border: 1px solid #744ecd; /* Optional border */
+    word-wrap: break-word; /* Ensure long words break to the next line */
+    font-family: 'Poppins', sans-serif; /* Set font for reply message */
+}
+
+/* Scrollbar Customization for content area */
+.content-area::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+}
+
+.content-area::-webkit-scrollbar-track {
+    background: #e6e6f0; /* Color of the scroll track */
+    border-radius: 10px; /* Rounded corners for the track */
+}
+
+.content-area::-webkit-scrollbar-thumb {
+    background-color: #744ecd; /* Scrollbar thumb color */
+    border-radius: 10px; /* Rounded scrollbar thumb */
+    border: 2px solid transparent; /* Space around the scrollbar */
+}
+
+/* Remove the scrollbar buttons (arrow heads) */
+.content-area::-webkit-scrollbar-button {
+    display: none; /* Hides the scrollbar buttons */
+}
+
+/* Button styles */
+button.reply-btn,
+button.discard-btn {
+    padding: 12px;
+    font-size: 14px;
+    text-align: center;
+    margin-right: 10px;
+    border-radius: 30px;
+    cursor: pointer;
+    width: 100px;
+    height: 40px;
+    transition: background-color 0.3s ease;
+    font-family: 'Poppins', sans-serif; /* Set font for buttons */
+}
+
+button.reply-btn {
+    background-color: #9370e4;
+    color: white;
+    border: none;
+}
+
+button.reply-btn:hover {
+    background-color: #744ecd;
+}
+
+button.discard-btn {
+    background-color: white;
+    color: #b094f0;
+    border: 1px solid #b094f0;
+}
+
+button.discard-btn:hover {
+    color: #ffffff;
+    background-color: #939ff1;
+}
+
+/* Reply icons */
+.reply-icons {
+    display: flex; /* Flexbox layout */
+    justify-content: flex-end; /* Pushes the icons to the right */
+    margin-top: 10px; /* Space above icons */
+}
+
+.reply-icons .edit-icon,
+.reply-icons .delete-icon {
+    background-color: #939ff1; /* Background color for icons */
+    color: white; /* Icon color */
+    width: 20px; /* Width of icons */
+    height: 20px; /* Height of icons */
+    border-radius: 50px; /* Rounded corners */
+    display: flex; /* Flexbox layout */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    cursor: pointer; /* Pointer cursor */
+    margin-left: 10px; /* Space to the left */
+    padding: 5px; /* Padding for icons */
+    font-size: 10px; /* Font size for icons */
+}
+
+.reply-icons .edit-icon:hover,
+.reply-icons .delete-icon:hover {
+    background-color: #ffffff; /* Darker background on hover */
+    color: #939ff1; /* Icon color on hover */
+}
+
+/* Replies section */
+.replies h5 {
+    font-size: 16px; /* Font size for replies */
+    color: #744ecd; /* Color for replies */
+    margin-bottom: 10px; /* Space below heading */
+    font-family: 'Poppins', sans-serif; /* Set font for replies heading */
+}
+
+/* Search bar container to hold both input and icon */
+.search-bar-container {
+    position: relative; /* Allow positioning of the icon */
+    width: 100%; /* Ensure container takes full width */
+}
+
+/* Search bar */
+input.search-bar {
+    width: 77%; /* Full width for search bar */
+    padding: 10px 50px; /* Padding for search bar (added right padding for icon) */
+    border-radius: 20px; /* Rounded corners */
+    border: none; /* No border color */
+    color: white; /* Text color */
+    margin-bottom: 20px; /* Space below search bar */
+    background-color: #adb7f5; /* Background color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
+    font-family: 'Poppins', sans-serif; /* Set font for search bar */
+}
+
+/* Focus state */
+.search-bar:focus {
+    outline: none; /* Remove outline on focus */
+}
+
+/* Placeholder text */
+input.search-bar::placeholder {
+    color: #ffffff; /* Placeholder text color */
+    opacity: 1; /* Opacity of placeholder */
+    font-style: italic; /* Italicize placeholder for differentiation */
+}
+
+/* Search icon circle */
+.search-icon-container {
+    position: absolute; /* Position relative to the search bar */
+    left: 10px; /* Space from left (adjust as necessary) */
+    top: 33%; /* Center vertically based on container height */
+    transform: translateY(-50%); /* Move it up to align properly */
+    background-color: white; /* Circle background color */
+    border-radius: 50%; /* Make it circular */
+    width: 28px; /* Width of the circle */
+    height: 28px; /* Height of the circle */
+    display: flex; /* Flexbox for centering the icon */
+    align-items: center; /* Center icon vertically */
+    justify-content: center; /* Center icon horizontally */
+}
+
+/* Search icon */
+.search-icon {
+    color: #744ecd; /* Icon color (purple) */
+    font-size: 16px; /* Size of the icon */
+    pointer-events: none; /* Prevent mouse events on the icon */
+}
+
+
+/* Arrow icon container styling */
+.arrow-icon-container {
+    background-color: white; /* White circle background */
+    border-radius: 50%; /* Make it circular */
+    width: 24px; /* Diameter of the circle */
+    height: 24px; /* Diameter of the circle */
+    display: flex; /* Flex layout to center the icon */
+    align-items: center; /* Center icon vertically */
+    justify-content: center; /* Center icon horizontally */
+    cursor: pointer; /* Pointer cursor for clickable icons */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin-left: 10px; /* Optional spacing from text */
+}
+
+/* Arrow icon styling */
+.view-icon {
+    color: #744ecd; /* Icon color (purple) */
+    font-size: 15px; /* Ensure the icon size is balanced within the circle */
+}
+
+.generate-report-container {
+    display: flex; /* Flex layout to align items */
+    justify-content: flex-end; /* Align to the right */
+    margin-top: 20px; /* Space above the button */
+
+  }
+  
+  .generate-report-btn {
+    padding: 8px 15px; /* Reduced padding for smaller button */
+    background-color: #939ff1; 
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    display: flex; /* Flex to align icon and text */
+    align-items: center; /* Center items vertically */
+  }
+  
+  .pdf-icon {
+    margin-right: 5px; /* Space between icon and text */
+    font-size: 16px; /* Adjust icon size */
+  }
+  
+  .generate-report-btn:hover {
+    background-color: #744ecd; /* Darker green on hover */
+  }
+  

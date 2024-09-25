@@ -1,0 +1,140 @@
+header {
+    position: absolute;
+    top: 0px;
+    height: 20%;
+    width: 100%;
+    min-width: 550px;
+    display: flex;
+    justify-content: space-evenly;
+    /* background-color: #a5e8f4; */
+    align-items: center;
+    z-index: 1;
+}
+
+.Logo {
+    position: relative;
+    width: 150px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+}
+
+.Logo img {
+    object-fit: cover;
+    width:100%;
+    
+}
+
+nav {
+    display: flex;
+    background-color: #ffffff;
+    width: 30%;
+    min-width: 500px;
+    padding: 5px 10px;
+    border-radius: 50px;
+    align-items: center;
+    height: 40px;
+    position: sticky;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    
+}
+
+header ul {
+    display: flex;
+    justify-content: space-evenly;
+    padding:0;
+    width: 100%;
+    font-size: 14px;
+}
+
+li {
+    display: block;
+    padding: 0;
+    margin: 0;
+    padding: 10px 15px;
+}
+
+li button {
+    background: none;
+    padding: none;
+    border:none;
+    color:#744ecd;
+    font-weight: 500;
+
+}
+
+.nav-btn::after {
+    content: '';
+    position: relative;
+    width: 0;
+    height: 2px;
+    display: block;
+    /* margin-top: 2px; */
+    right: 0;
+    background: #744ecd;
+    transition: width 0.4s ease;
+}
+
+.nav-btn:hover::after {
+    width: 100%;
+    left: 0;
+    background: #744ecd;
+}
+
+.Profile {
+    position: relative;
+    width: 80px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.Profile img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.Profile .login-btn {
+    color: #ffffff;
+    background-color: #8a7be2;
+    border-radius: 20px;
+    margin-top: 5px;
+    padding:5px 20px;
+    border:none;
+    cursor: pointer;
+    transition: .8s;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.login-btn:hover {
+    transform: scale(1.1);
+    background-color:#4a2893 ;
+    transition: .8s;
+}
+
+.register-btn {
+    color: #ffffff;
+    background-color: #939ff1;
+    border-radius: 20px;
+    margin-top: 5px;
+    padding:5px 20px;
+    border:none;
+    cursor: pointer;
+    transition: .8s;
+    margin-right: 10px;
+    font-size: 14px;
+
+}
+
+.register-btn:hover {
+    transform: scale(1.1);
+    background-color:#4a2893 ;
+    transition: .8s;
+}
+
+
+/* Fade out animation */
+
